@@ -1,6 +1,5 @@
 import { z } from "zod";
 
-import { z } from "zod";
 
 export const contactSchema = z.object({
     fullName: z.string()

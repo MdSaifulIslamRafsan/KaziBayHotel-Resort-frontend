@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Menu, X, User, LogOut, Sun, Moon } from 'lucide-react';
+import { Menu, X, User, LogOut } from 'lucide-react';
 
 import { toast } from 'react-toastify';
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Headphones, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
 const contactItems = [
   {
     icon: Mail,
@@ -24,7 +25,9 @@ export default function Footer() {
 
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
+          width={1200}
+          height={400}
           src="/images/footer-bg.jpg"
           alt="footer bg"
           className="h-full w-full  bg-center"

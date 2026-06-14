@@ -1,7 +1,6 @@
 "use client";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import CForm from "../form/CForm";
-import CInput from "../form/CInput";
 import CSelect from "../form/CSelect";
 import { Button } from "../ui/button";
 import CDatePicker from "../form/CDatePicker";

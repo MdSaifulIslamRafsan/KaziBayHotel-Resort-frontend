@@ -12,7 +12,7 @@ const ContactInfo = () => {
             </h2>
 
             <p className="text-foreground/70 mb-10">
-                We'd love to hear from you. Feel free to
+               {` We'd`} love to hear from you. Feel free to
                 contact us anytime.
             </p>
 
