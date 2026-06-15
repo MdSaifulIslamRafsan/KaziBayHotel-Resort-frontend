@@ -31,7 +31,7 @@ const CDatePicker = ({ name, label, placeholder, className }: TDatePickerProps) 
                     )}
 
                     <Popover >
-                        <PopoverTrigger className="bg-transparent hover:text-white hover:bg-transparent py-[22px]" asChild>
+                        <PopoverTrigger className="bg-transparent  hover:bg-transparent py-[22px]" asChild>
                             <Button
                                 variant="outline"
                                 className={cn(

@@ -13,7 +13,7 @@ const BannerForm = () => {
         <CForm
             onSubmit={onSubmit}
 
-            styles="bg-white/10 backdrop-blur-xl border border-white/20 p-4 md:p-6 rounded-2xl max-w-5xl mx-auto w-full"
+            styles="backdrop-blur-xl border border-border shadow-sm mt-12 p-4 md:p-6 rounded-2xl max-w-5xl mx-auto w-full"
         >
             {() => (
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-3 items-end">
@@ -22,21 +22,21 @@ const BannerForm = () => {
                     <CDatePicker
                         name="checkIn"
                         placeholder="Check-in"
-                        className="text-muted"
+                        className="text-foreground/60"
                     />
 
                     {/* Check-out */}
                     <CDatePicker
                         name="checkOut"
                         placeholder="Check-out"
-                        className="text-muted"
+                        className="text-foreground/60"
                     />
 
                     {/* Guests */}
                     <CSelect
                         name="guests"
                         placeholder="Guests"
-                        className="text-muted"
+                        // className="text-muted"
                         options={[
                             { label: "1 Guest", value: "1" },
                             { label: "2 Guests", value: "2" },
