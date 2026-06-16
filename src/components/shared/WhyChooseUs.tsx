@@ -15,8 +15,8 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-20 bg-background">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="mx-auto container px-4 md:px-6 lg:px-8 py-20 bg-background">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 2xl:gap-20 items-center">
         {/* LEFT CONTENT */}
         <div className="space-y-6">
           <SectionHeader
@@ -33,12 +33,11 @@ const WhyChooseUs = () => {
           </p>
 
           {/* Feature badges */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {features.map((item, i) => (
               <Badge
                 key={i}
-                variant="secondary"
-                className="px-4 py-2 text-sm rounded-full"
+                className="px-4 py-2 bg-primary/5 hover:bg-primary/15 text-foreground text-sm rounded-full"
               >
                 <CheckCircle2 className="w-4 h-4 mr-2 text-primary" />
                 {item}
@@ -58,31 +57,17 @@ const WhyChooseUs = () => {
         </div>
 
         {/* RIGHT IMAGES */}
-        <div className="relative flex justify-center lg:justify-end gap-6">
-          {/* big image */}
-          <div className="relative w-[280px] md:w-[320px] h-[420px] rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src="/images/resort/about-1.jpg"
-              alt="Luxury Lounge"
-              fill
-              className="object-cover hover:scale-105 transition duration-700"
-            />
-          </div>
-
-          {/* small image + badge */}
-          <div className="relative w-[220px] md:w-[260px] h-[380px] mt-10 rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src="/images/resort/about-2.jpg"
-              alt="Hotel Lobby"
-              fill
-              className="object-cover hover:scale-105 transition duration-700"
-            />
-
-            {/* overlay badge */}
-            <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-md px-4 py-3 rounded-xl shadow-md text-center">
-              <p className="text-lg font-bold text-foreground">4k+</p>
-              <p className="text-xs text-foreground/60">Happy Customer</p>
-            </div>
+        <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/resort/about.jpg"
+            alt="Luxury Resort"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-700"
+          />
+          {/* overlay badge */}
+          <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-md px-4 py-3 rounded-xl shadow-md text-center">
+            <p className="text-lg font-bold text-foreground">4k+</p>
+            <p className="text-xs text-foreground/60">Happy Customer</p>
           </div>
         </div>
       </div>

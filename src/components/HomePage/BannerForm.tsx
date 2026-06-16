@@ -13,7 +13,7 @@ const BannerForm = () => {
     <div className="px-4 md:px-6 lg:px-8">
       <CForm
         onSubmit={onSubmit}
-        styles="backdrop-blur-xl shadow-sm mt-12 p-4 md:p-6 rounded-2xl max-w-7xl mx-auto w-full"
+        styles="backdrop-blur-xl border border-border shadow-sm mt-12 p-4 md:p-6 rounded-2xl max-w-7xl mx-auto w-full"
       >
         {() => (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3 items-end">

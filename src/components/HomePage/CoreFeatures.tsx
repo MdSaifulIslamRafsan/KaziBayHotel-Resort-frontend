@@ -47,11 +47,11 @@ export const CoreFeatures = () => {
 
   return (
     <section className="py-12 px-4 md:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         {/* Header */}
         <SectionHeader subtitle="CORE FEATURES" title="Discover Our Features" />
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 2xl:gap-20 items-start">
           {/* Left Side - Features List */}
           <div className=" space-y-4">
             {features.map((feature, index) => {
@@ -61,9 +61,9 @@ export const CoreFeatures = () => {
                   key={feature.id}
                   onClick={() => setActiveFeature(index)}
                   className={cn(
-                    "w-full text-left p-6 rounded-2xl transition-all duration-300 shadow-sm group",
+                    "w-full text-left border border-border p-8 rounded-2xl transition-all duration-300 shadow-sm group",
                     activeFeature === index
-                      ? "bg-card shadow-2xl"
+                      ? "bg-primary/10 shadow-2xl"
                       : "bg-background",
                   )}
                 >

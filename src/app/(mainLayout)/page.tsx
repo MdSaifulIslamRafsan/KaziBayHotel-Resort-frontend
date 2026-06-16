@@ -3,6 +3,7 @@ import BannerForm from "@/components/HomePage/BannerForm";
 import CoreFeatures from "@/components/HomePage/CoreFeatures";
 import HowItWorks from "@/components/HomePage/HowItWorks";
 import OurFacilities from "@/components/HomePage/OurFacilities";
+import VideoOverview from "@/components/HomePage/VideoOverview";
 import AboutUs from "@/components/shared/AboutUs";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyChooseUs></WhyChooseUs>
       <CoreFeatures></CoreFeatures>
       <OurFacilities></OurFacilities>
+      <VideoOverview></VideoOverview>
       <HowItWorks></HowItWorks>
     </>
   );

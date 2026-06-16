@@ -35,7 +35,7 @@ const CDatePicker = ({ name, label, placeholder, className }: TDatePickerProps) 
                             <Button
                                 variant="outline"
                                 className={cn(
-                                    "w-full justify-start text-left font-normal pr-10",
+                                    "w-full border-input justify-start text-left font-normal pr-10",
                                     !field.value && "text-muted-foreground",
                                     className
                                 )}

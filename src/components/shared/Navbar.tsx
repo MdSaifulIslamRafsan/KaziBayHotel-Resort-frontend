@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Menu, X, User, LogOut } from 'lucide-react';
+} from "@/components/ui/dropdown-menu";
+import { Menu, X, User, LogOut } from "lucide-react";
 
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export default function Navbar() {
   const router = useRouter();
@@ -30,10 +30,10 @@ export default function Navbar() {
   const handleLogout = async () => {
     try {
       // await logout();
-      toast.success('Logged out successfully.');
-      router.push('/auth/login');
+      toast.success("Logged out successfully.");
+      router.push("/auth/login");
     } catch (error: any) {
-      toast.error(error?.message || 'Failed to logout. Please try again.');
+      toast.error(error?.message || "Failed to logout. Please try again.");
     }
 
     // setIsLoading(true);
@@ -41,7 +41,6 @@ export default function Navbar() {
   useEffect(() => {
     const SCROLL_HIDE_THRESHOLD = 80;
     const SCROLL_STOP_DELAY = 300;
-
 
     let timeoutId: NodeJS.Timeout | null = null;
 
@@ -62,7 +61,11 @@ export default function Navbar() {
       }
 
       // ✅ ONLY FIRST TIME animation
-      if (!hasAnimated.current && isScrollingDown && currentScrollY > SCROLL_HIDE_THRESHOLD) {
+      if (
+        !hasAnimated.current &&
+        isScrollingDown &&
+        currentScrollY > SCROLL_HIDE_THRESHOLD
+      ) {
         setShowNavbar(false);
 
         if (timeoutId) clearTimeout(timeoutId);
@@ -91,105 +94,117 @@ export default function Navbar() {
     };
   }, []);
   const routes = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/service', label: 'Service' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/contact', label: 'Contact' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/service", label: "Service" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const isActive = (path: any) => pathname === path;
 
   return (
     <header>
-    <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${showNavbar
-      ? "translate-y-0 opacity-100"
-      : "-translate-y-full opacity-0"
-      } ${scrolled
-        ? "bg-primary/90 shadow-md backdrop-blur-md"
-        : "bg-background/95 backdrop-blur"
-      }`}>
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
-            <span className={`text-xl font-bold transition-colors duration-300 
-  ${scrolled ? "text-secondary" : "text-primary"}`}>Sunset Grove</span>
-          </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6">
-          {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={`text-sm font-medium transition-colors duration-300
-  ${isActive(route.href)
-                  ? (scrolled ? "text-primary-foreground" : "text-primary")
-                  : (scrolled ? "text-muted-foreground hover:text-primary-foreground" : "text-foreground hover:text-primary")
-                }`}
-            >
-              {route.label}
+      <div
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+          showNavbar
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0"
+        } ${
+          scrolled
+            ? "bg-primary/90 shadow-md backdrop-blur-md"
+            : "bg-background/95 backdrop-blur"
+        }`}
+      >
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
+              <span
+                className={`text-xl font-bold transition-colors duration-300 
+  ${scrolled ? "text-secondary" : "text-primary"}`}
+              >
+                Sunset Grove
+              </span>
             </Link>
-          ))}
-        </nav>
+          </div>
 
-        {/* Desktop Auth Buttons */}
-        <div className="hidden md:flex gap-4">
-
-          {user ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="gap-2">
-                  <User size={16} />
-                  {user.name || 'Account'}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {user.role === 'ADMIN' && (
-                  <DropdownMenuItem asChild>
-                    <Link href="/admin/dashboard">Admin Dashboard</Link>
-                  </DropdownMenuItem>
-                )}
-                {user.role === 'USER' && (
-                  <DropdownMenuItem asChild>
-                    <Link href="/user/reviews">My Reviews</Link>
-                  </DropdownMenuItem>
-                )}
-                <DropdownMenuItem
-                  onClick={handleLogout}
-                  className="text-red-500"
-                >
-                  <LogOut size={16} className="mr-2" />
-                  Logout
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <>
-              <Link href="/auth/login">
-                <Button variant="outline">Login</Button>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex gap-6">
+            {routes.map((route) => (
+              <Link
+                key={route.href}
+                href={route.href}
+                className={`font-medium transition-colors duration-300
+  ${
+    isActive(route.href)
+      ? scrolled
+        ? "text-primary-foreground"
+        : "text-primary"
+      : scrolled
+        ? "text-muted-foreground hover:text-primary-foreground"
+        : "text-foreground hover:text-primary"
+  }`}
+              >
+                {route.label}
               </Link>
-              <Link href="/auth/register">
-                <Button className="bg-primary ">Register</Button>
-              </Link>
-            </>
-          )}
-        </div>
+            ))}
+          </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-5 md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`transition-colors duration-300 ${scrolled ? "text-primary-foreground" : "text-foreground"
+          {/* Desktop Auth Buttons */}
+          <div className="hidden md:flex gap-4">
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="w-10 h-10 rounded-full">
+                    <User size={16} />
+                    
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {user.role === "ADMIN" && (
+                    <DropdownMenuItem asChild>
+                      <Link href="/admin/dashboard">Admin Dashboard</Link>
+                    </DropdownMenuItem>
+                  )}
+                  {user.role === "USER" && (
+                    <DropdownMenuItem asChild>
+                      <Link href="/user/reviews">My Reviews</Link>
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuItem
+                    onClick={handleLogout}
+                    className="text-red-500"
+                  >
+                    <LogOut size={16} className="mr-2" />
+                    Logout
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <>
+                <Link href="/auth/login">
+                  <Button variant="outline">Login</Button>
+                </Link>
+                <Link href="/auth/register">
+                  <Button className="bg-primary ">Register</Button>
+                </Link>
+              </>
+            )}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="flex items-center gap-5 md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`transition-colors duration-300 ${
+                scrolled ? "text-primary-foreground" : "text-foreground"
               }`}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
-
-    </div>
       {/* Mobile Menu */}
       {isMenuOpen && (
         <>
@@ -204,12 +219,7 @@ export default function Navbar() {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-border p-5">
               <div>
-                <h3 className="font-bold text-lg text-primary">
-                  Sunset Grove
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Resort & Booking
-                </p>
+                <h3 className="font-bold text-lg text-primary">Sunset Grove</h3>
               </div>
 
               <button
@@ -227,11 +237,12 @@ export default function Navbar() {
                   key={route.href}
                   href={route.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-lg px-4 py-3 text-sm font-medium transition-all
-              ${isActive(route.href)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-muted"
-                    }`}
+                  className={`rounded-lg px-4 py-3 font-medium transition-all
+              ${
+                isActive(route.href)
+                  ? "bg-primary text-primary-foreground"
+                  : "text-foreground hover:bg-muted"
+              }`}
                 >
                   {route.label}
                 </Link>
@@ -249,9 +260,6 @@ export default function Navbar() {
 
                     <div>
                       <p className="font-medium">{user.name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {user.role}
-                      </p>
                     </div>
                   </div>
 
@@ -289,10 +297,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <div className="flex flex-col gap-2">
-                  <Link
-                    href="/auth/login"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
                     <Button variant="outline" className="w-full">
                       Login
                     </Button>
@@ -302,9 +307,7 @@ export default function Navbar() {
                     href="/auth/register"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Button className="w-full">
-                      Register
-                    </Button>
+                    <Button className="w-full">Register</Button>
                   </Link>
                 </div>
               )}
