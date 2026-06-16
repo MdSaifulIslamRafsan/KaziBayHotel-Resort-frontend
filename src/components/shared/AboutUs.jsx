@@ -1,0 +1,55 @@
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import SectionHeader from "@/components/shared/SectionHeader";
+
+const features = [
+  "Private Beach Access",
+  "Luxury Suites & Villas",
+  "Infinity Pool",
+  "24/7 Premium Service",
+];
+const AboutUs = () => {
+  return (
+    <section className="mx-auto container px-4 md:px-6 lg:px-8 py-12 bg-background">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-8  lg:gap-12">
+        {/* Left Content */}
+        <div className="space-y-4">
+          <SectionHeader
+            subtitle="About Our Resort"
+            title="Where Luxury Meets Nature"
+            align="start"
+          />
+          <p className="text-foreground/60 leading-relaxed text-base md:text-lg">
+            Escape to a world where comfort meets nature. Our resort offers a
+            serene beachfront experience with modern luxury, world-class
+            hospitality, and unforgettable views. Whether you're here for
+            relaxation or adventure, we ensure every moment feels special.
+          </p>
+
+          <p className="text-foreground/60 leading-relaxed text-base md:text-lg">
+            We believe in creating memories that last a lifetime — from sunrise
+            over the ocean to candle-lit dinners under the stars.
+          </p>
+
+          <Button className="mt-4 py-6 px-10 bg-primary text-primary-foreground">
+            Explore More
+          </Button>
+        </div>
+
+        {/* Right Image */}
+        <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/resort/about.jpg"
+            alt="Luxury Resort"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-700"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        </div>
+      </div>
+    </section>
+  );
+};
+export default AboutUs;
