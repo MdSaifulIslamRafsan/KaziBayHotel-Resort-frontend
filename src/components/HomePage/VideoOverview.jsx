@@ -10,25 +10,20 @@ const VideoOverview = () => {
   return (
     <section className="relative py-12 flex flex-col items-center justify-center">
       {/* Thumbnail */}
-      <div className="relative w-full h-[80vh] overflow-hidden shadow-xl cursor-pointer">
-        <Image
-          src="/images/footer-bg.jpg"
-          alt="Hotel Video Thumbnail"
-          fill
-          className="object-cover"
-        />
-
+      <div
+        className="relative w-full h-[80vh] overflow-hidden shadow-xl cursor-pointer bg-fixed bg-center bg-cover"
+        style={{ backgroundImage: "url('/images/footer-bg.jpg')" }}
+      >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30" />
 
         {/* Play Button */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* Ripple */}
           <span className="absolute h-20 w-20 rounded-full bg-primary/20 animate-ping" />
 
           <button
             onClick={() => setOpen(true)}
-            className="relative flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary shadow-xl hover:scale-105 transition"
+            className="relative flex items-center justify-center h-16 w-16 rounded-full bg-primary shadow-xl hover:scale-105 transition"
           >
             <Play className="w-6 h-6 ml-1 text-black" />
           </button>
