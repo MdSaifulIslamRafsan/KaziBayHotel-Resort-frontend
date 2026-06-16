@@ -2,17 +2,24 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 
-const features = [
-  "Private Beach Access",
-  "Luxury Suites & Villas",
-  "Infinity Pool",
-  "24/7 Premium Service",
-];
+
 const AboutUs = () => {
   return (
-    <section className="mx-auto container px-4 md:px-6 lg:px-8 py-12 bg-background">
+    <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 bg-background">
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-8  lg:gap-12">
-        {/* Left Content */}
+        {/* Left Image */}
+        <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/resort/about.jpg"
+            alt="Luxury Resort"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-700"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        </div>
+        {/* Right Content */}
         <div className="space-y-4">
           <SectionHeader
             subtitle="About Our Resort"
@@ -34,19 +41,6 @@ const AboutUs = () => {
           <Button className="mt-4 py-6 px-10 bg-primary text-primary-foreground">
             Explore More
           </Button>
-        </div>
-
-        {/* Right Image */}
-        <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-          <Image
-            src="/images/resort/about.jpg"
-            alt="Luxury Resort"
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-700"
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
       </div>
     </section>
