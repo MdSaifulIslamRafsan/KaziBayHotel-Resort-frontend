@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { TRoom } from "@/types/RoomType";
 
 import {
     Users,
@@ -10,7 +11,7 @@ import {
     Star,
 } from "lucide-react";
 
-const RoomCard = ({ room }) => {
+const RoomCard = ({ room }: { room: TRoom }) => {
     return (
         <Card className="group py-0 overflow-hidden rounded-3xl border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
 

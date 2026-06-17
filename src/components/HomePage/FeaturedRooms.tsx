@@ -119,7 +119,7 @@ const FeaturedRooms = () => {
                 <div className="block lg:hidden">
                     <Swiper
                         spaceBetween={20}
-                        slidesPerView={1.5}
+                        slidesPerView={1.3}
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,

@@ -15,7 +15,6 @@ export default function Home() {
       <AboutUs></AboutUs>
       <WhyChooseUs></WhyChooseUs>
       <FeaturedRooms></FeaturedRooms>
-      <WhyChooseUs></WhyChooseUs>
       <CoreFeatures></CoreFeatures>
       <OurFacilities></OurFacilities>
       <VideoOverview></VideoOverview>
