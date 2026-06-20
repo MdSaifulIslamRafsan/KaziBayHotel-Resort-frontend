@@ -39,15 +39,15 @@ export default function Footer() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 pt-14 pb-8 ">
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-8 items-start">
 
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-2">
             <h3 className="text-xl font-bold text-primary tracking-wide">
               LuxeStay Resort
             </h3>
 
-            <p className="text-muted/70 leading-relaxed">
+            <p className="text-muted/70 leading-relaxed max-w-[400px]">
               Experience luxury, comfort, and breathtaking views.
               Book your perfect stay and enjoy world-class hospitality
               crafted for unforgettable moments.
@@ -140,9 +140,9 @@ export default function Footer() {
                 const Icon = item.icon;
 
                 return (
-                  <li key={index} className="flex items-center gap-2">
-                    <Icon size={20} className="text-muted/60" />
-                    <span className="pb-1">{item.text}</span>
+                  <li key={index} className="flex items-center gap-1">
+                    <Icon size={16} className="text-muted/60" />
+                    <span className="pb-1 ">{item.text}</span>
                   </li>
                 );
               })}
