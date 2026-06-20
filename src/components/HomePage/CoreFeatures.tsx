@@ -46,7 +46,7 @@ export const CoreFeatures = () => {
   }, [activeFeature]);
 
   return (
-    <section className="py-12 px-4 md:px-6 lg:px-8 bg-background">
+    <section className="pt-12 lg:py-12 px-4 md:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         {/* Header */}
         <SectionHeader subtitle="CORE FEATURES" title="Discover Our Features" />

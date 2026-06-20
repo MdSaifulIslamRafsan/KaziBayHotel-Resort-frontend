@@ -8,7 +8,7 @@ const VideoOverview = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative py-12 flex flex-col items-center justify-center">
+    <section className="relative pt-12 lg:py-12 flex flex-col items-center justify-center">
       {/* Thumbnail */}
       <div
         className="relative w-full h-[80vh] overflow-hidden shadow-xl cursor-pointer bg-fixed bg-center bg-cover"
@@ -19,13 +19,16 @@ const VideoOverview = () => {
 
         {/* Play Button */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="absolute h-20 w-20 rounded-full bg-primary/20 animate-ping" />
+          <span className="absolute h-20 w-20 rounded-full bg-muted/20 animate-ping" />
+          <span className="absolute h-20 w-20 rounded-full bg-muted/20 animate-ping" />
+          <span className="absolute h-20 w-20 rounded-full bg-muted/20 animate-ping" />
+          <span className="absolute h-20 w-20 rounded-full bg-muted/20 animate-ping" />
 
           <button
             onClick={() => setOpen(true)}
             className="relative flex items-center justify-center h-16 w-16 rounded-full bg-primary shadow-xl hover:scale-105 transition"
           >
-            <Play className="w-6 h-6 ml-1 text-black" />
+            <Play className="w-6 h-6 ml-1 text-muted" />
           </button>
         </div>
       </div>

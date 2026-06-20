@@ -9,3 +9,14 @@ export type TRoom = {
     bed: string;
     size: string;
 };
+
+export type TOffer = {
+    id: number;
+    title: string;
+    image: string;
+    rating: number;
+    price: number;
+    discount: number;
+    expiry: string;
+    description: string;
+};

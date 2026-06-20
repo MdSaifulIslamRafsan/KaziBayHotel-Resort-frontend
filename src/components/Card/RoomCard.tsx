@@ -41,30 +41,30 @@ const RoomCard = ({ room }: { room: TRoom }) => {
             </div>
 
             {/* Content */}
-            <CardContent className="px-4 pb-4 space-y-4">
+            <CardContent className="px-3 pb-3 space-y-4">
                 <div>
                     <h3 className="text-2xl font-serif font-semibold">
                         {room?.name}
                     </h3>
 
-                    <p className="text-foreground/70 mt-2">
+                    <p className="text-foreground/70 mt-2 line-clamp-2">
                         {room?.description}
                     </p>
                 </div>
 
                 {/* Amenities */}
-                <div className="flex flex-wrap gap-4 text-sm text-foreground/70">
-                    <div className="flex items-center gap-2">
+                <div className="flex flex-wrap gap-3 text-sm text-foreground/70">
+                    <div className="flex items-center gap-1">
                         <Users size={16} />
                         <span>{room?.guests} Guests</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                         <BedDouble size={16} />
                         <span>{room?.bed}</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                         <Expand size={16} />
                         <span>{room?.size}</span>
                     </div>

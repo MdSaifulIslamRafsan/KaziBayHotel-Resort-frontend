@@ -1,11 +1,16 @@
 "use client";
 import SectionHeader from "../shared/SectionHeader";
 import RoomCard from "../Card/RoomCard";
-import { Button } from "../ui/button";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
+import "swiper/css/navigation";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "../ui/button";
 
 const rooms = [
     {
@@ -108,7 +113,7 @@ const rooms = [
 
 const FeaturedRooms = () => {
     return (
-        <section className="py-12 px-4 md:px-6 lg:px-8 bg-background">
+        <section className="pt-12 lg:py-12 px-4 md:px-6 lg:px-8 bg-background">
             <div className="container mx-auto">
                 <SectionHeader
                     subtitle="Featured Rooms"
@@ -116,12 +121,39 @@ const FeaturedRooms = () => {
                 />
 
                 {/* Mobile Slider */}
-                <div className="block lg:hidden">
+                <div className="block lg:hidden relative">
+                    {/* Custom Navigation */}
+
+                    <button className="testimonial-prev h-12 w-12 rounded-full border border-border bg-primary text-muted flex items-center justify-center absolute top-1/2 z-20 -translate-y-1/2">
+                        <ChevronLeft size={20} />
+                    </button>
+
+                    <button className="testimonial-next h-12 w-12 rounded-full border border-border bg-primary text-muted flex items-center justify-center absolute top-1/2 right-0 z-20 -translate-y-1/2">
+                        <ChevronRight size={20} />
+                    </button>
                     <Swiper
-                        spaceBetween={20}
-                        slidesPerView={1.3}
+                        modules={[Navigation, Autoplay]}
+                        navigation={{
+                            prevEl: ".testimonial-prev",
+                            nextEl: ".testimonial-next",
+                        }}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        }}
+                        loop={true}
+                        spaceBetween={24}
+                        slidesPerView={1}
                         breakpoints={{
-                            640: {
+                            430: {
+                                slidesPerView: 1.3,
+                                spaceBetween: 24,
+                            },
+                            500: {
+                                slidesPerView: 1.5,
+                                spaceBetween: 24,
+                            },
+                            650: {
                                 slidesPerView: 2,
                                 spaceBetween: 24,
                             },
