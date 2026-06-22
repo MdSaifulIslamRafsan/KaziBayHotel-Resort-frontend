@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
             className="object-cover hover:scale-105 transition-transform duration-700"
           />
           {/* overlay badge */}
-          <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-md px-4 py-3 rounded-xl shadow-md text-center">
+          <div className="absolute bottom-4 right-4 bg-primary/5/90 backdrop-blur-md px-4 py-3 rounded-xl shadow-md text-center">
             <p className="text-lg font-bold text-foreground">4k+</p>
             <p className="text-xs text-foreground/60">Happy Customer</p>
           </div>

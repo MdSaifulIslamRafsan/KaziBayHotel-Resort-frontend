@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { TOffer } from "@/types/RoomType";
 import RatingStars from "../shared/RatingStars";

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import SectionHeader from "../shared/SectionHeader";
 import {
   BedDouble,
@@ -11,6 +10,7 @@ import {
   Utensils,
   Trees,
 } from "lucide-react";
+import FacilitiesCard from "../Card/FacilitiesCard";
 
 const amenities = [
   {
@@ -69,45 +69,13 @@ const OurFacilities = () => {
           {/* Left Side - Sticky Cards */}
           <div className="">
             <div className="space-y-6">
-              {amenities.map((amenity, index) => {
-                const Icon = amenity.icon;
-
-                return (
-                  <div
-                    key={amenity.id}
-                    className={cn(
-                      "lg:sticky rounded-3xl border border-border shadow-sm p-8 cursor-pointer transition-all duration-500 bg-background",
-                    )}
-                    style={{
-                      top: `${80 + index * 30}px`,
-                      zIndex: index + 1,
-                    }}
-                  >
-                    <div className="">
-                      <div
-                        className={cn(
-                          "w-12 h-12 bg-primary text-muted rounded-full flex items-center justify-center text-2xl flex-shrink-0 transition-all mb-2 lg:mb-4",
-                        )}
-                      >
-                        <Icon className="w-6 h-6" />
-                      </div>
-
-                      <div className="pt-1 flex-1">
-                        <h3
-                          className={cn(
-                            "text-lg lg:text-xl font-semibold mb-3 transition-colors",
-                          )}
-                        >
-                          {amenity.title}
-                        </h3>
-                        <p className="leading-relaxed text-foreground/60">
-                          {amenity.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+              {amenities.map((amenity, index) => (
+                <FacilitiesCard
+                  key={amenity?.id}
+                  amenity={amenity}
+                  index={index}
+                ></FacilitiesCard>
+              ))}
             </div>
           </div>
 

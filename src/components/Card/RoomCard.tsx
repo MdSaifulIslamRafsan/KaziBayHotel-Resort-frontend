@@ -8,7 +8,6 @@ import {
     Users,
     BedDouble,
     Expand,
-    Star,
 } from "lucide-react";
 
 const RoomCard = ({ room }: { room: TRoom }) => {

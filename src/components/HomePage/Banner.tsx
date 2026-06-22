@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen 2xl:h-[80vh] w-full overflow-hidden">
       {/*  Background Video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -21,7 +21,7 @@ const Banner = () => {
           {/* Text Content */}
           <div className="text-muted text-center space-y-4 mb-8 max-w-4xl mx-auto">
             <h1 className="font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-2">
-              Discover Kazi Bay Resort
+              Discover Kazi Bay Resort 
             </h1>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
