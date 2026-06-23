@@ -46,8 +46,8 @@ export const CoreFeatures = () => {
   }, [activeFeature]);
 
   return (
-    <section className="pt-12 lg:py-12 px-4 md:px-6 lg:px-8 bg-background">
-      <div className="container mx-auto">
+    <section className="pt-12 lg:py-8 bg-background">
+      <div className="container mx-auto  px-4 md:px-6 lg:px-8">
         {/* Header */}
         <SectionHeader subtitle="CORE FEATURES" title="Discover Our Features" />
 
@@ -82,7 +82,7 @@ export const CoreFeatures = () => {
                     <div>
                       <h3
                         className={cn(
-                          "text-lg lg:text-xl font-semibold mb-2 transition-colors",
+                          "text-xl font-semibold mb-2 transition-colors",
                           activeFeature === index
                             ? "text-foreground"
                             : "text-foreground",
@@ -101,35 +101,34 @@ export const CoreFeatures = () => {
           </div>
 
           {/* Right Side - Dynamic Image */}
-          <div className=" relative h-full">
-            <div className="relative rounded-3xl w-full h-[320px] sm:h-[400px] lg:h-full overflow-hidden shadow-xl  bg-muted">
+          <div className="relative w-full h-full">
+            <div className="relative rounded-3xl w-full h-[320px] sm:h-[400px] lg:h-full overflow-hidden shadow-xl">
               <Image
                 src={currentImage}
                 alt={`${features[activeFeature].title}`}
                 fill
-                className="object-cover  transition-all duration-500 h-full"
+                className="object-cover w-full transition-all duration-500 h-full"
                 // sizes="(max-width: 1024px) 100vw, 700px"
                 priority
               />
 
               {/* Overlay Content */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 md:p-12">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8">
                 <div className="max-w-md">
-                  <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-white text-sm font-medium rounded-full mb-4">
+                  <span className="inline-block px-4 py-1.5 bg-muted/10 backdrop-blur-md text-muted text-xs lg:text-sm font-medium rounded-full mb-2 md:mb-4">
                     FEATURE HIGHLIGHT
                   </span>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                  <h3 className="text-xl md:text-3xl font-bold text-muted mb-2">
                     {features[activeFeature].title}
                   </h3>
-                  <p className="text-white/90 text-lg leading-relaxed">
+                  <p className="text-muted  leading-relaxed">
                     {features[activeFeature].description}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
+            
           </div>
         </div>
       </div>

@@ -12,33 +12,31 @@ type Props = {
 const OfferCard = ({ offer, reverse = false }: Props) => {
     return (
         <div
-            className={`grid md:grid-cols-2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all border-1 border-border duration-500 group $
+            className={`grid md:grid-cols-2 overflow-hidden rounded-3xl shadow-sm hover:shadow-lg transition-all border-1 border-border duration-500 group $
       ${reverse
                     ? "md:[&>*:first-child]:order-2"
                     : ""
                 }`}
         >
             {/* Content */}
-            <div className="relative order-2 md:order-none flex flex-col justify-center p-8 lg:p-10 ">
+            <div className="relative order-2 md:order-none flex flex-col justify-center p-6 lg:p-8 ">
 
-
-
-                <h3 className="text-3xl font-serif leading-tight mb-4">
+                <h3 className="text-xl font-semibold xl:text-3xl leading-tight mb-3 md:mb-5">
                     {offer.title}
                 </h3>
 
-                <div className="flex items-center gap-2 mb-5">
-                  <RatingStars rating={offer?.rating}></RatingStars>
+                <div className="flex items-center gap-2 mb-3 md:mb-5">
+                    <RatingStars rating={offer?.rating}></RatingStars>
                     <span>{offer.rating}</span>
                     <span className="text-foreground/70">Reviews</span>
                 </div>
 
-                <p className="text-foreground/70 leading-7 mb-6">
+                <p className="text-foreground/70 leading-7 mb-3 md:mb-5">
                     {offer.description}
                 </p>
 
-                <div className="flex items-end gap-4 mb-8">
-                    <span className="text-4xl font-semibold">
+                <div className="flex items-end gap-4 mb-3 md:mb-8">
+                    <span className="text-2xl xl:text-4xl font-semibold">
                         ${offer.price}
                     </span>
 
@@ -57,7 +55,7 @@ const OfferCard = ({ offer, reverse = false }: Props) => {
             </div>
 
             {/* Image */}
-            <div className="order-1  md:order-none relative min-h-[350px] overflow-hidden">
+            <div className="order-1  md:order-none relative min-h-[300px] overflow-hidden">
                 <Image
                     src={offer.image}
                     alt={offer.title}

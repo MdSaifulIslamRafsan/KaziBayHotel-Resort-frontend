@@ -14,7 +14,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-primary/5 p-5 lg:p-8 rounded-xl border">
+    <div className="bg-background p-5 lg:p-8 rounded-xl border">
       <h2 className="text-3xl font-semibold mb-8">Send Message</h2>
 
       <CForm

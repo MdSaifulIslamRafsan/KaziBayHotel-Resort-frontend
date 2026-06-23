@@ -5,7 +5,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 
 const AboutUs = () => {
   return (
-    <section className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-12 bg-background">
+    <section className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-8 bg-background">
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 2xl:gap-20">
         {/* Left Image */}
         <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">

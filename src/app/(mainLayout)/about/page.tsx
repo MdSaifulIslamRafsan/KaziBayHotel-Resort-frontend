@@ -10,7 +10,7 @@ const AboutPage = () => {
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About" }]}
       />
-      <section className="container mx-auto py-12 px-4 md:px-6 lg:px-8">
+      <section className="container mx-auto  lg:py-14 px-4 md:px-6 lg:px-8">
         <AboutUs></AboutUs>
         <WhyChooseUs></WhyChooseUs>
       </section>

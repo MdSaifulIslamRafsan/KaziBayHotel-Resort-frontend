@@ -48,7 +48,7 @@ const stepsData: Step[] = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="pt-12 lg:py-12 px-4 md:px-6 lg:px-8 bg-background"
+    <section className="pt-12 lg:py-8 px-4 md:px-6 lg:px-8 bg-background"
     >
       <div className="container mx-auto">
         <SectionHeader
@@ -98,7 +98,7 @@ const HowItWorks: React.FC = () => {
 
                   {/* Content */}
                   <div className="px-4">
-                    <h3 className="text-xl 2xl:text-2xl font-serif font-bold text-foreground mb-3">
+                    <h3 className="text-xl 2xl:text-2xl  font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
                     <p className="text-sm md:text-base text-foreground/70 leading-relaxed">

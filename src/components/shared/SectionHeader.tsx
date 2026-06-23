@@ -15,7 +15,7 @@ const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <div
-      className={`${align === "start" ? "text-start" : "text-center"} mb-8 ${className}`}
+      className={`${align === "start" ? "text-center lg:text-start" : "text-center"} mb-8 ${className}`}
     >
       <div className="inline-flex flex-col items-center">
         <div className="inline-flex flex-col items-center mb-4">
@@ -33,7 +33,7 @@ const SectionHeader = ({
         </div>
       </div>
 
-      <h2 className="text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-serif font-bold text-foreground">
+      <h2 className="text-2xl lg:text-4xl 2xl:text-5xl leading-tight  font-bold text-foreground">
         {title}
       </h2>
     </div>

@@ -15,7 +15,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-12 bg-background">
+    <section className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-8 bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 2xl:gap-20 items-center">
         {/* LEFT CONTENT */}
         <div className="space-y-6">

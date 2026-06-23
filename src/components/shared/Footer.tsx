@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 pt-14 pb-8 ">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 pt-12 pb-8 ">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-8 items-start">
 

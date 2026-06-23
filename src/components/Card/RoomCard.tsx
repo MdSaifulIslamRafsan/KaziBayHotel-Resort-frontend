@@ -42,7 +42,7 @@ const RoomCard = ({ room }: { room: TRoom }) => {
             {/* Content */}
             <CardContent className="px-3 pb-3 space-y-4">
                 <div>
-                    <h3 className="text-2xl font-serif font-semibold">
+                    <h3 className="text-xl font-semibold">
                         {room?.name}
                     </h3>
 

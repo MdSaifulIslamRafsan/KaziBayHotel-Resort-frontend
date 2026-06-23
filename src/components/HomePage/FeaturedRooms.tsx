@@ -9,7 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 const rooms = [
@@ -113,7 +113,7 @@ const rooms = [
 
 const FeaturedRooms = () => {
     return (
-        <section className="pt-12 lg:py-12 px-4 md:px-6 lg:px-8 bg-background">
+        <section className="pt-12 lg:py-8 px-4 md:px-6 lg:px-8 bg-background">
             <div className="container mx-auto">
                 <SectionHeader
                     subtitle="Featured Rooms"
@@ -124,13 +124,13 @@ const FeaturedRooms = () => {
                 <div className="block lg:hidden relative">
                     {/* Custom Navigation */}
 
-                    <button className="testimonial-prev h-12 w-12 rounded-full border border-border bg-primary text-muted flex items-center justify-center absolute top-1/2 z-20 -translate-y-1/2">
+                    {/* <button className="testimonial-prev h-12 w-12 rounded-full border border-border bg-primary text-muted flex items-center justify-center absolute top-1/2 z-20 -translate-y-1/2">
                         <ChevronLeft size={20} />
                     </button>
 
                     <button className="testimonial-next h-12 w-12 rounded-full border border-border bg-primary text-muted flex items-center justify-center absolute top-1/2 right-0 z-20 -translate-y-1/2">
                         <ChevronRight size={20} />
-                    </button>
+                    </button> */}
                     <Swiper
                         modules={[Navigation, Autoplay]}
                         navigation={{

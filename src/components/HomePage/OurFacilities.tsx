@@ -57,7 +57,7 @@ const amenities = [
 
 const OurFacilities = () => {
   return (
-    <section className="pt-12 lg:py-12 bg-background">
+    <section className="pt-12 lg:py-8 bg-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeader
           subtitle="OUR FACILITIES"
@@ -74,12 +74,13 @@ const OurFacilities = () => {
                   key={amenity?.id}
                   amenity={amenity}
                   index={index}
+                  isSticky
                 ></FacilitiesCard>
               ))}
             </div>
           </div>
 
-          <div className="sticky top-20 max-h-[600px] w-full h-[320px] rounded-3xl overflow-hidden sm:h-[400px] lg:h-full">
+          <div className="sticky top-[72px] max-h-[480px] w-full h-[320px] rounded-3xl overflow-hidden sm:h-[400px] lg:h-full">
             <Image
               src={"/images/OceanViewExperience.png"}
               alt={"facilities-image"}

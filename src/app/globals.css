@@ -166,3 +166,11 @@ button {
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
+
+
+@media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+    top: var(--top);
+  }
+}

@@ -96,7 +96,9 @@ export default function Navbar() {
   const routes = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
+    { href: "/service", label: "Service" },
+    { href: "/room", label: "Room" },
+    { href: "/blog", label: "Blog" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
   ];
@@ -106,15 +108,13 @@ export default function Navbar() {
   return (
     <header>
       <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
-          showNavbar
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0"
-        } ${
-          scrolled
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${showNavbar
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-full opacity-0"
+          } ${scrolled
             ? "bg-primary/90 shadow-md backdrop-blur-md"
             : "bg-background/95 backdrop-blur"
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -135,15 +135,14 @@ export default function Navbar() {
                 key={route.href}
                 href={route.href}
                 className={`font-medium transition-colors duration-300
-  ${
-    isActive(route.href)
-      ? scrolled
-        ? "text-primary-foreground"
-        : "text-primary"
-      : scrolled
-        ? "text-muted-foreground hover:text-primary-foreground"
-        : "text-foreground hover:text-primary"
-  }`}
+  ${isActive(route.href)
+                    ? scrolled
+                      ? "text-primary-foreground"
+                      : "text-primary"
+                    : scrolled
+                      ? "text-muted-foreground hover:text-primary-foreground"
+                      : "text-foreground hover:text-primary"
+                  }`}
               >
                 {route.label}
               </Link>
@@ -157,7 +156,7 @@ export default function Navbar() {
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="w-10 h-10 rounded-full">
                     <User size={16} />
-                    
+
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
@@ -196,9 +195,8 @@ export default function Navbar() {
           <div className="flex items-center gap-5 md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`transition-colors duration-300 ${
-                scrolled ? "text-primary-foreground" : "text-foreground"
-              }`}
+              className={`transition-colors duration-300 ${scrolled ? "text-primary-foreground" : "text-foreground"
+                }`}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -238,11 +236,10 @@ export default function Navbar() {
                   href={route.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`rounded-lg px-4 py-3 font-medium transition-all
-              ${
-                isActive(route.href)
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground hover:bg-muted"
-              }`}
+              ${isActive(route.href)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground hover:bg-muted"
+                    }`}
                 >
                   {route.label}
                 </Link>

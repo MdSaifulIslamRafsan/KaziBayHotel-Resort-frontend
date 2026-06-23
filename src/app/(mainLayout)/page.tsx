@@ -1,5 +1,6 @@
 import Banner from "@/components/HomePage/Banner";
 import BannerForm from "@/components/HomePage/BannerForm";
+import Blogs from "@/components/HomePage/Blogs";
 import CoreFeatures from "@/components/HomePage/CoreFeatures";
 import FeaturedRooms from "@/components/HomePage/FeaturedRooms";
 import HowItWorks from "@/components/HomePage/HowItWorks";
@@ -23,6 +24,7 @@ export default function Home() {
       <VideoOverview></VideoOverview>
       <HowItWorks></HowItWorks>
       <Testimonials></Testimonials>
+      <Blogs></Blogs>
     </>
   );
 }
