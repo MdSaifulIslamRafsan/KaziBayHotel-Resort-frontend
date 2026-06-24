@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SharedBanner from "../shared/SharedBanner";
 import { GalleryImage, RoomType } from "@/types/GalleryType";
-import ImageModal from "./ImageModal";
+import ImageModal from "../Modal/ImageModal";
 // import { Eye } from 'lucide-react';
 
 // Mock data
