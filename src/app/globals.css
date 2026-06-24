@@ -168,9 +168,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-@media (min-width: 1024px) {
-  .lg\:sticky {
-    position: sticky;
-    top: var(--top);
-  }
-}

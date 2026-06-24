@@ -67,17 +67,16 @@ const OurFacilities = () => {
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 2xl:gap-20 items-start">
           {/* Left Side - Sticky Cards */}
-          <div className="">
-            <div className="space-y-6">
-              {amenities.map((amenity, index) => (
-                <FacilitiesCard
-                  key={amenity?.id}
-                  amenity={amenity}
-                  index={index}
-                  isSticky
-                ></FacilitiesCard>
-              ))}
-            </div>
+
+          <div className="space-y-6">
+            {amenities.map((amenity, index) => (
+              <FacilitiesCard
+                key={amenity?.id}
+                amenity={amenity}
+                index={index}
+                isSticky={true}
+              ></FacilitiesCard>
+            ))}
           </div>
 
           <div className="sticky top-[72px] max-h-[480px] w-full h-[320px] rounded-3xl overflow-hidden sm:h-[400px] lg:h-full">

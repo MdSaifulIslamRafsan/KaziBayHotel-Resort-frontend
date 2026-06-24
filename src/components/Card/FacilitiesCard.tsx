@@ -18,23 +18,27 @@ type AmenityCardProps = {
   isSticky?: boolean;
 };
 
-
-const FacilitiesCard = ({ amenity, index, showIndex = false, isSticky = false }: AmenityCardProps) => {
+const FacilitiesCard = ({
+  amenity,
+  index,
+  showIndex = false,
+  isSticky = false,
+}: AmenityCardProps) => {
   const Icon = amenity.icon;
-  const isLg = typeof window !== "undefined" && window.innerWidth >= 1024;
+  console.log(isSticky);
 
   return (
     <Card
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
-        isSticky && "lg:sticky"
+        "rounded-2xl border border-border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+        isSticky ? "lg:sticky" : "relative",
       )}
       style={
         isSticky
           ? {
-            "--top": `${72 + index * 30}px`,
-            zIndex: index + 1,
-          } as React.CSSProperties
+              top: `${72 + index * 30}px`,
+              zIndex: index + 1,
+            }
           : undefined
       }
     >

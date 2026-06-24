@@ -10,7 +10,7 @@ const contactPage = () => {
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact" }]}
       />
-      <section className="container mx-auto  lg:py-14 px-4 md:px-6 lg:px-8">
+      <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <ContactInfo />
