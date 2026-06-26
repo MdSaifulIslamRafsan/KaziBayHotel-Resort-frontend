@@ -25,12 +25,11 @@ const FacilitiesCard = ({
   isSticky = false,
 }: AmenityCardProps) => {
   const Icon = amenity.icon;
-  console.log(isSticky);
 
   return (
     <Card
       className={cn(
-        "rounded-2xl border border-border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+        "rounded-2xl overflow-hidden border border-border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
         isSticky ? "lg:sticky" : "relative",
       )}
       style={

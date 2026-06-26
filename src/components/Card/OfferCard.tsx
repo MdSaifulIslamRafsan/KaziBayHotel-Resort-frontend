@@ -43,7 +43,7 @@ const OfferCard = ({ offer, reverse = false }: Props) => {
 
         <Button
           variant="default"
-          className="w-fit rounded-full px-12 py-4 text-sm font-medium"
+          className="w-fit"
         >
           View Offer
           <ArrowRight />

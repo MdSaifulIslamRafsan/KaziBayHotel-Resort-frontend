@@ -8,6 +8,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { ArrowRight } from "lucide-react";
 
 const blogs = [
     {
@@ -139,9 +140,8 @@ const Blogs = () => {
                 <div className="flex justify-center mt-12">
                     <Button
                         size="lg"
-                        className="rounded-full px-10"
                     >
-                        Explore More Blogs
+                        Explore More <ArrowRight />
                     </Button>
                 </div>
             </div>

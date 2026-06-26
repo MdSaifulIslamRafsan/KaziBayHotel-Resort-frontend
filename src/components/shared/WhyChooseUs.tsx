@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const features = [
   "Luxury Accommodation",
@@ -51,8 +51,8 @@ const WhyChooseUs = () => {
             These characteristics prioritize comfort and quality.
           </div>
 
-          <Button className="mt-4 py-6 px-10 bg-primary text-primary-foreground">
-            Explore More
+          <Button  size="lg" className="mt-4">
+            Explore More <ArrowRight />
           </Button>
         </div>
 

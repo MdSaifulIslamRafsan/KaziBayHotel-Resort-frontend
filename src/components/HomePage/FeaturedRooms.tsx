@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 
 // import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 const rooms = [
     {
@@ -178,9 +179,9 @@ const FeaturedRooms = () => {
                 <div className="flex justify-center mt-12">
                     <Button
                         size="lg"
-                        className="rounded-full px-10"
+                        
                     >
-                        Explore More Rooms
+                        Explore More <ArrowRight />
                     </Button>
                 </div>
             </div>

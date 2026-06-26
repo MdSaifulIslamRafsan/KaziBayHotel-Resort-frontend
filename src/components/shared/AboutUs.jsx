@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
+import { ArrowRight } from "lucide-react";
 
 
 const AboutUs = () => {
@@ -38,8 +39,8 @@ const AboutUs = () => {
             over the ocean to candle-lit dinners under the stars.
           </p>
 
-          <Button className="mt-4 py-6 px-10 bg-primary text-primary-foreground">
-            Explore More
+          <Button  size="lg" className="mt-4">
+            Explore More <ArrowRight />
           </Button>
         </div>
       </div>
