@@ -13,47 +13,8 @@ const RoomSlider = ({ images }: RoomSliderProps) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null,
   );
-  const roomImages: RoomImage[] =
-    images?.length > 0
-      ? images
-      : [
-          {
-            id: "1",
-            src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-            alt: "Luxury Suite with Ocean View",
-            title: "Luxury Suite",
-          },
-          {
-            id: "2",
-            src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop",
-            alt: "Beachfront Room",
-            title: "Beachfront Room",
-          },
-          {
-            id: "3",
-            src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-            alt: "Luxury Suite with Ocean View",
-            title: "Premium Room",
-          },
-          {
-            id: "4",
-            src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-            alt: "Luxury Suite with Ocean View",
-            title: "Modern Suite",
-          },
-          {
-            id: "5",
-            src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-            alt: "Deluxe Room",
-            title: "Deluxe Room",
-          },
-          {
-            id: "6",
-            src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-            alt: "Presidential Suite",
-            title: "Presidential Suite",
-          },
-        ];
+
+
 
   return (
     <section className="w-full py-12 lg:py-14 mt-3">
@@ -78,7 +39,7 @@ const RoomSlider = ({ images }: RoomSliderProps) => {
           loop={true}
           className="room-slider"
         >
-          {roomImages.map((room, index) => (
+          {images.map((room, index) => (
             <SwiperSlide key={room.id}>
               <div
                 onClick={() => setSelectedImageIndex(index)}
@@ -117,7 +78,7 @@ const RoomSlider = ({ images }: RoomSliderProps) => {
       </div>
       {selectedImageIndex !== null && (
         <ImageModal
-          images={roomImages}
+          images={images}
           initialIndex={selectedImageIndex}
           onClose={() => setSelectedImageIndex(null)}
         />

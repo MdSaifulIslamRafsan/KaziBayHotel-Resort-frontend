@@ -1,4 +1,9 @@
 import RoomCard from "@/components/Card/RoomCard";
+import AmenitiesSection from "@/components/RoomDetailsPage/AmenitiesSection";
+import AvailabilityCalendar from "@/components/RoomDetailsPage/AvailabilityCalendar";
+import ReserveForm from "@/components/RoomDetailsPage/ReserveForm";
+import RoomDetailsSpecifications from "@/components/RoomDetailsPage/RoomDetailsSpecifications";
+import RoomOverviewSection from "@/components/RoomDetailsPage/RoomOverviewSection";
 import RoomSlider from "@/components/RoomDetailsPage/Roomslider";
 import SectionHeader from "@/components/shared/SectionHeader";
 // import SharedBanner from "@/components/shared/SharedBanner";
@@ -68,6 +73,44 @@ const rooms = [
     size: "650 sqft",
   },
 ];
+const images = [
+  {
+    id: "1",
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+    alt: "Luxury Suite with Ocean View",
+    title: "Luxury Suite",
+  },
+  {
+    id: "2",
+    src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop",
+    alt: "Beachfront Room",
+    title: "Beachfront Room",
+  },
+  {
+    id: "3",
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+    alt: "Luxury Suite with Ocean View",
+    title: "Premium Room",
+  },
+  {
+    id: "4",
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+    alt: "Luxury Suite with Ocean View",
+    title: "Modern Suite",
+  },
+  {
+    id: "5",
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+    alt: "Deluxe Room",
+    title: "Deluxe Room",
+  },
+  {
+    id: "6",
+    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+    alt: "Presidential Suite",
+    title: "Presidential Suite",
+  },
+]
 
 const RoomDetailsPage = () => {
   return (
@@ -77,8 +120,19 @@ const RoomDetailsPage = () => {
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Room Details" }]}
       /> */}
-      <RoomSlider></RoomSlider>
-      <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
+      <RoomSlider images={images}></RoomSlider>
+      <section className="grid grid-cols-1 gap-10 lg:grid-cols-6 container mx-auto px-4 md:px-6 lg:px-8 pb-12 lg:pb-14">
+        <div className="lg:col-span-4">
+          <RoomOverviewSection />
+          <AmenitiesSection></AmenitiesSection>
+          <AvailabilityCalendar></AvailabilityCalendar>
+        </div>
+        <div className="lg:col-span-2">
+          <RoomDetailsSpecifications />
+          <ReserveForm />
+        </div>
+      </section>
+      {/* <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
         <SectionHeader
           subtitle="Similar Rooms"
           title="Discover Related Accommodations"
@@ -88,7 +142,7 @@ const RoomDetailsPage = () => {
             <RoomCard key={room.id} room={room} />
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
