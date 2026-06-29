@@ -27,8 +27,8 @@ const BlogCard = ({ blog }: BlogCardProps) => {
             {/* Image */}
             <div className="relative aspect-[4/2] overflow-hidden">
                 <Image
-                    src={blog.image}
-                    alt={blog.title}
+                    src={blog?.image}
+                    alt={blog?.title}
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -39,30 +39,30 @@ const BlogCard = ({ blog }: BlogCardProps) => {
                 <div className="flex items-center gap-6 text-sm text-foreground/70">
                     <div className="flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-primary" />
-                        <span>{blog.date}</span>
+                        <span>{blog?.date}</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    {/* <div className="flex items-center gap-2">
                         <MessageSquare className="h-4 w-4 text-primary" />
-                        <span>{blog.comments} Comments</span>
-                    </div>
+                        <span>{blog?.comments} Comments</span>
+                    </div> */}
                 </div>
 
                 <div className="my-3 h-px bg-border" />
 
                 {/* Title */}
                 <h3 className="mb-3 text-xl font-semibold leading-tight text-foreground">
-                    {blog.title}
+                    {blog?.title}
                 </h3>
 
                 {/* Description */}
                 <p className="mb-3 text-foreground/70 line-clamp-2 leading-8">
-                    {blog.description}
+                    {blog?.description}
                 </p>
 
                 {/* Read More */}
                 <Link
-                    href={`/blog/${blog.slug}`}
+                    href={`/blog/${blog?.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-primary transition-all hover:gap-3"
                 >
                     Read More

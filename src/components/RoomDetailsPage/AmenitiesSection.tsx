@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import { AMENITIES, AMENITIES_DETAILS } from "@/types/RoomType";
-import { Droplets, Dumbbell, Phone, Plane, SquareChartGantt, Waves, Wifi, Wind } from "lucide-react";
+import { Droplets, Dumbbell, Phone, Plane, SquareChartGantt, Trees, Waves, Wifi, Wind } from "lucide-react";
 
 const AmenityIcon = ({ icon }: { icon: string }) => {
-    const iconProps = "w-6 h-6 text-[#D4A574]";
+    const iconProps = "w-6 h-6 text-primary";
     const iconMap: { [key: string]: React.ReactNode } = {
         wifi: <Wifi className={iconProps} />,
         shower: <Droplets className={iconProps} />,
         plane: <Plane className={iconProps} />,
-        balcony: <SquareChartGantt className={iconProps} />,
+        balcony: <Trees className={iconProps} />,
         wind: <Wind className={iconProps} />,
         phone: <Phone className={iconProps} />,
         desk: <SquareChartGantt className={iconProps} />,
@@ -29,11 +29,11 @@ const AmenitiesSection = () => {
             <div className="grid  grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 mb-12">
                 {AMENITIES.map((amenity) => (
                     <div
-                        key={amenity.id}
+                        key={amenity?.id}
                         className="flex items-center text-center p-2 gap-2 rounded-lg"
                     >
-                        <AmenityIcon icon={amenity.icon} />
-                        <p className="text-foreground font-semibold text-sm sm:text-lg">{amenity.name}</p>
+                        <AmenityIcon icon={amenity?.icon} />
+                        <p className="text-foreground font-semibold text-sm sm:text-lg">{amenity?.name}</p>
                     </div>
                 ))}
             </div>
