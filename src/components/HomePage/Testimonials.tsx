@@ -51,8 +51,8 @@ export const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="pt-12 lg:py-8 bg-background">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <section className="pt-12 lg:py-12 bg-background-secondary">
+      <div className="container mx-auto px-4 md:px-10 lg:px-20">
         <SectionHeader subtitle="Testimonials" title="What Our Guests Say" />
         <div className="relative">
           {/* Custom Navigation */}

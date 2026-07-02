@@ -8,7 +8,7 @@ const VideoOverview = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative pt-12 lg:py-8 flex flex-col items-center justify-center">
+    <section className="relative pt-12 lg:py-12 flex flex-col items-center justify-center">
       {/* Thumbnail */}
       <div
         className="relative w-full h-[80vh] overflow-hidden shadow-xl cursor-pointer bg-fixed bg-center bg-cover"

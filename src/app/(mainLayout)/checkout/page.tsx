@@ -13,7 +13,7 @@ const CheckoutPage = () => {
         ]}
       />
 
-      <section className="container py-12 lg:py-14 px-4 md:px-6 lg:px-8">
+      <section className="container py-12 lg:py-12 px-4 md:px-10 lg:px-20">
 
         <CheckoutForm />
 

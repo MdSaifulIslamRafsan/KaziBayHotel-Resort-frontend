@@ -49,7 +49,7 @@ export const offers = [
 
 const OfferPackage = () => {
     return (
-        <div className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-8 bg-backgroun">
+        <div className="mx-auto container px-4 md:px-10 lg:px-20 pt-12 lg:py-12 bg-backgroun">
             <SectionHeader
                 subtitle="Special Offers"
                 title="Exclusive Deals"

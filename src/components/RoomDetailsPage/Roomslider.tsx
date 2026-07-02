@@ -17,7 +17,7 @@ const RoomSlider = ({ images }: RoomSliderProps) => {
 
 
   return (
-    <section className="w-full py-12 lg:py-14 mt-3">
+    <section className="w-full py-12 lg:py-12 mt-3">
       {/* Slider Container */}
       <div className="relative bg-muted rounded-lg overflow-hidden">
         <Swiper

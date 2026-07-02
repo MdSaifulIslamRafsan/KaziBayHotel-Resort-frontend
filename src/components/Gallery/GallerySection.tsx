@@ -144,15 +144,14 @@ const GallerySection = () => {
       />
 
       {/* Tab System */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 lg:py-14">
+      <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12 lg:py-12">
         <div className="flex flex-wrap gap-4 mb-5 border-b border-border">
           {ROOM_TYPES?.map((room) => (
             <button
               key={room.id}
               onClick={() => setActiveTab(room?.id)}
-              className={`pb-4 px-2 text-sm md:text-base font-medium transition-all relative ${
-                activeTab === room.id ? "text-primary font-semibold" : ""
-              }`}
+              className={`pb-4 px-2 text-sm md:text-base font-medium transition-all relative ${activeTab === room.id ? "text-primary font-semibold" : ""
+                }`}
             >
               {room.label}
               {activeTab === room.id && (

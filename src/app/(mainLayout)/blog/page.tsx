@@ -72,8 +72,8 @@ const ServicesPage = () => {
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Blog" }]}
       />
-      <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+      <section className="container mx-auto py-12 lg:py-12 px-4 md:px-10 lg:px-20">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3  gap-8">
           {blogs.map((blog) => (
             <BlogCard key={blog?.id} blog={blog}></BlogCard>
           ))}

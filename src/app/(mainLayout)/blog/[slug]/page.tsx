@@ -5,15 +5,15 @@ import Markdown from "react-markdown"
 
 
 const blog = {
-  id: 1,
-  title: "Your Journey Starts With Us",
-  slug: "your-journey-starts-with-us",
-  image:
-    "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop",
-  date: "19 Oct, 2025",
-  author: "Admin",
-  tags: ["Travel", "Hotel", "Resort"],
-  content: `
+    id: 1,
+    title: "Your Journey Starts With Us",
+    slug: "your-journey-starts-with-us",
+    image:
+        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop",
+    date: "19 Oct, 2025",
+    author: "Admin",
+    tags: ["Travel", "Hotel", "Resort"],
+    content: `
 Traveling is more than reaching a destination. It's about experiencing comfort, discovering new places, and creating unforgettable memories.
 
 ## Why Choose Premium Stays?
@@ -50,7 +50,7 @@ const BlogDetailsPage = () => {
                 ]}
             />
 
-            <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
+            <section className="container mx-auto py-12 lg:py-12 px-4 md:px-10 lg:px-20">
                 <div className="flex flex-wrap items-center gap-6 text-sm text-foreground/60">
                     <div className="flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-primary" />

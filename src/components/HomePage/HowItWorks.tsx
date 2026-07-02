@@ -48,69 +48,69 @@ const stepsData: Step[] = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="pt-12 lg:py-8 px-4 md:px-6 lg:px-8 bg-background"
+    <section className="container mx-auto pt-12 lg:py-12 px-4 md:px-10 lg:px-20 bg-background"
     >
-      <div className="container mx-auto">
-        <SectionHeader
-          subtitle="How It Works"
-          title="Our Booking Process"
-        />
+
+      <SectionHeader
+        subtitle="How It Works"
+        title="Our Booking Process"
+      />
 
 
-        {/* Timeline Container */}
-        <div className="relative">
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-0">
-            {stepsData.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div
-                  key={step.id}
-                  className="relative group flex flex-col items-center text-center"
-                >
-                  {/* Connecting Line (hidden on mobile, visible on desktop) */}
-                  {index < stepsData.length - 1 && (
-                    <div
-                      className="hidden lg:block absolute top-4 left-5/8 w-[calc(100%-90px)] h-[1px]  bg-border"
-                      style={{
-                        transform: "translateX(0.5rem)",
-                        backgroundImage:
-                          "repeating-linear-gradient(90deg, #009C9C 0px, #009C9C 4px, transparent 4px, transparent 8px)",
-                      }}
-                    />
-                  )}
+      {/* Timeline Container */}
+      <div className="relative">
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-0">
+          {stepsData.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <div
+                key={step.id}
+                className="relative group flex flex-col items-center text-center"
+              >
+                {/* Connecting Line (hidden on mobile, visible on desktop) */}
+                {index < stepsData.length - 1 && (
+                  <div
+                    className="hidden lg:block absolute top-4 left-5/8 w-[calc(100%-90px)] h-[1px]  bg-border"
+                    style={{
+                      transform: "translateX(0.5rem)",
+                      backgroundImage:
+                        "repeating-linear-gradient(90deg, #009C9C 0px, #009C9C 4px, transparent 4px, transparent 8px)",
+                    }}
+                  />
+                )}
 
-                  {/* Step Badge */}
-                  <div className="mb-6 inline-flex">
-                    <span className="px-4 py-2 rounded-full bg-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground text-sm font-semibold">
-                      STEP {String(step.id).padStart(2, '0')}
-                    </span>
-                  </div>
-
-                  {/* Icon Container */}
-                  <div className="mb-2 rounded-full flex items-center justify-center ">
-                    <Icon
-                      size={48}
-                      className="text-primary"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="px-4">
-                    <h3 className="text-xl 2xl:text-2xl  font-bold text-foreground mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                {/* Step Badge */}
+                <div className="mb-6 inline-flex">
+                  <span className="px-4 py-2 rounded-full bg-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground text-sm font-semibold">
+                    STEP {String(step.id).padStart(2, '0')}
+                  </span>
                 </div>
-              );
-            })}
-          </div>
+
+                {/* Icon Container */}
+                <div className="mb-2 rounded-full flex items-center justify-center ">
+                  <Icon
+                    size={48}
+                    className="text-primary"
+                    strokeWidth={1.5}
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="px-4">
+                  <h3 className="text-xl 2xl:text-2xl  font-bold text-foreground mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
+
     </section>
   );
 };

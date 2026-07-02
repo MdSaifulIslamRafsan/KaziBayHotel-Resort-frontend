@@ -18,7 +18,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   const [imgSrc, setImgSrc] = useState(testimonial?.image);
 
   return (
-    <Card className="h-full w-full flex flex-col border border-border bg-transparent rounded-2xl shadow-md">
+    <Card className="h-full w-full flex flex-col border border-border rounded-2xl shadow-md">
       <CardContent className="flex flex-col flex-1 w-full">
         {/* Top */}
         <div className="flex items-center justify-between mb-3">
@@ -28,7 +28,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         </div>
 
         {/* Review */}
-        <p className="text-foreground/70 leading-6 flex-1 min-h-32 lg:min-h-[100px]">
+        <p className="text-foreground/70 leading-6 flex-1 min-h-32 lg:min-h-[140px]">
           {testimonial?.review}
         </p>
 

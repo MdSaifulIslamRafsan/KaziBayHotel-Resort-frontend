@@ -21,7 +21,7 @@ const contactItems = [
 ];
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border text-muted">
+    <footer className="relative border-t border-border text-muted lg:mt-10">
 
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -37,15 +37,21 @@ export default function Footer() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 pt-12 pb-8 ">
+      <div className="relative z-10 container mx-auto px-4 md:px-10 lg:px-20 pt-12 pb-8 ">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-8 items-start">
 
           {/* Brand */}
           <div className="space-y-4 lg:col-span-2">
-            <h3 className="text-xl font-bold text-primary tracking-wide">
-              LuxeStay Resort
-            </h3>
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={150}
+                height={150}
+                className="w-24 sm:w-28 md:w-32 lg:w-36 2xl:w-40 h-auto"
+              ></Image>
+            </Link>
 
             <p className="text-muted/70 leading-relaxed max-w-[400px]">
               Experience luxury, comfort, and breathtaking views.

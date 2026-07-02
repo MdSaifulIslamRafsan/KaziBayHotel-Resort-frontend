@@ -46,8 +46,8 @@ export const CoreFeatures = () => {
   }, [activeFeature]);
 
   return (
-    <section className="pt-12 lg:py-8 bg-background">
-      <div className="container mx-auto  px-4 md:px-6 lg:px-8">
+    <section className="pt-12 lg:py-12 bg-background-secondary">
+      <div className="container mx-auto  px-4 md:px-10 lg:px-20">
         {/* Header */}
         <SectionHeader subtitle="CORE FEATURES" title="Discover Our Features" />
 
@@ -63,7 +63,7 @@ export const CoreFeatures = () => {
                   className={cn(
                     "w-full text-left border border-border p-8 rounded-2xl transition-all duration-300 shadow-sm group",
                     activeFeature === index
-                      ? "bg-primary/10 shadow-2xl"
+                      ? "border border-primary bg-background"
                       : "bg-background",
                   )}
                 >
@@ -128,7 +128,7 @@ export const CoreFeatures = () => {
               </div>
             </div>
 
-            
+
           </div>
         </div>
       </div>

@@ -121,7 +121,7 @@ const RoomDetailsPage = () => {
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Room Details" }]}
       /> */}
       <RoomSlider images={images}></RoomSlider>
-      <section className="grid grid-cols-1 gap-10 lg:grid-cols-6 container mx-auto px-4 md:px-6 lg:px-8 pb-12 lg:pb-14">
+      <section className="grid grid-cols-1 gap-10 lg:grid-cols-6 container mx-auto px-4 md:px-10 lg:px-20 pb-12 lg:pb-14">
         <div className="lg:col-span-4">
           <RoomOverviewSection />
           <AmenitiesSection></AmenitiesSection>
@@ -132,7 +132,7 @@ const RoomDetailsPage = () => {
           <ReserveForm />
         </div>
       </section>
-      {/* <section className="container mx-auto py-12 lg:py-14 px-4 md:px-6 lg:px-8">
+      {/* <section className="container mx-auto py-12 lg:py-12 px-4 md:px-10 lg:px-20">
         <SectionHeader
           subtitle="Similar Rooms"
           title="Discover Related Accommodations"

@@ -25,16 +25,16 @@ const BlogCard = ({ blog }: BlogCardProps) => {
     return (
         <Card className="overflow-hidden rounded-3xl border-border bg-background transition-all duration-300 hover:-translate-y-1 hover:shadow-lg py-0">
             {/* Image */}
-            <div className="relative aspect-[4/2] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                     src={blog?.image}
                     alt={blog?.title}
                     fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    className="object-cover h-full transition-transform duration-500 hover:scale-105"
                 />
             </div>
 
-            <CardContent className="p-6">
+            <CardContent className="px-6 pb-6">
                 {/* Meta */}
                 <div className="flex items-center gap-6 text-sm text-foreground/70">
                     <div className="flex items-center gap-2">

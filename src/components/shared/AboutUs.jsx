@@ -6,15 +6,15 @@ import { ArrowRight } from "lucide-react";
 
 const AboutUs = () => {
   return (
-    <section className="mx-auto container px-4 md:px-6 lg:px-8 pt-12 lg:py-8 bg-background">
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 2xl:gap-20">
+    <section className="mx-auto container px-4 md:px-10 lg:px-20 mt-12 pt-12 lg:py-12 bg-background-secondary">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 2xl:gap-20">
         {/* Left Image */}
         <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
           <Image
-            src="/images/resort/about.jpg"
+            src="/images/rooms/room-1.jpg"
             alt="Luxury Resort"
             fill
-            className="object-cover hover:scale-105 transition-transform duration-700"
+            className="hover:scale-105 transition-transform duration-700"
           />
 
           {/* Overlay */}
@@ -39,7 +39,7 @@ const AboutUs = () => {
             over the ocean to candle-lit dinners under the stars.
           </p>
 
-          <Button  size="lg" className="mt-4">
+          <Button size="lg" className="mt-4">
             Explore More <ArrowRight />
           </Button>
         </div>
